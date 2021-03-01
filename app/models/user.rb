@@ -6,7 +6,7 @@ class User < ApplicationRecord
     
     has_many :microposts
     
-    has_many :favorites, dependent: :destroy
+    has_many :favorites
     has_many :likes, through: :favorites, source: :micropost
     
     has_many :relationships
